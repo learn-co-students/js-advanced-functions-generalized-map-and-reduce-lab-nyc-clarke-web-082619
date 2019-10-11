@@ -7,8 +7,8 @@ function map(sourceArray, change){
 }
 
 function reduce(sourceArray, change, startingPoint) {
-    let newNum = (!!startingPoint) ? startingPoint : sourceArray[0]
-    let i = (!!startingPoint) ? 0 : 1
+    let newNum = startingPoint ? startingPoint : sourceArray[0]
+    let i = startingPoint ? 0 : 1
     for(; i<sourceArray.length; i+=1){
         newNum = change(sourceArray[i], newNum)
     }
