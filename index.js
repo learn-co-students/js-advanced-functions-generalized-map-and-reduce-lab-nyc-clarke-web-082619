@@ -8,13 +8,13 @@ function map(sourceArray, fn){
 }
 
 function reduce(someArray, fn, startingPoint=0){
-    let total = someArray[0];  
+    let result = someArray[0];  
     if (startingPoint){
-        total = startingPoint + total;
+        result += startingPoint;
     }
     for(let i = 1;i<someArray.length; i++){
-        total = fn(someArray[i], total);
+        result = fn(someArray[i], result);
     }
     
-    return total;
+    return result;
 }
